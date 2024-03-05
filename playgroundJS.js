@@ -87,7 +87,7 @@ if (window.innerWidth > 900) {
 
     else if (scrollVal < 0 && pagePos <= 0) {
       $('#c2').removeClass('vidToTop');
-      setTimeout(hidePage, 500)
+      setTimeout(hidePage, 1500)
     }
 
     if ($('body').scrollTop() >= 0) {
