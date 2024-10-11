@@ -4,7 +4,7 @@ if (window.innerWidth > 900) {
   var img = new Image();
   var clearCanvas;
   var fader;
-  img.src = "https://www.lucapupulin.com/wp-content/uploads/2024/03/brush1g.png";
+  img.src = "https://www.lucapupulin.com/wp-content/uploads/2024/10/brush2024.png";
   img.width = 360;
 
   function distanceBetween(point1, point2) {
@@ -87,7 +87,7 @@ if (window.innerWidth > 900) {
 
     else if (scrollVal < 0 && pagePos <= 0) {
       $('#c2').removeClass('vidToTop');
-      setTimeout(hidePage, 1500)
+      setTimeout(hidePage, 500)
     }
 
     if ($('body').scrollTop() >= 0) {
