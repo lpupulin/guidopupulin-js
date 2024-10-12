@@ -39,7 +39,7 @@ if (window.innerWidth > 900) {
     var currentPoint = { x: e.clientX, y: e.clientY };
     var dist = distanceBetween(lastPoint, currentPoint);
     var angle = angleBetween(lastPoint, currentPoint);
-    for (var i = 0; i < dist; i += 35) {
+    for (var i = 0; i < dist; i += 10) {
       x = lastPoint.x + (Math.sin(angle) * i);
       y = lastPoint.y + (Math.cos(angle) * i);
       ctx.save();
