@@ -39,16 +39,15 @@ if (window.innerWidth > 900) {
     var currentPoint = { x: e.clientX, y: e.clientY };
     var dist = distanceBetween(lastPoint, currentPoint);
     var angle = angleBetween(lastPoint, currentPoint);
-    for (var i = 0; i < dist; i += 1) {
+    var angle = Math.atan2(mouseY - lastPoint.y, mouseX - lastPoint.x); // Calculate a consistent angle
+    for (var i = 0; i < dist; i += 2) { // Keep this small for smoother drawing
       x = lastPoint.x + (Math.sin(angle) * i);
       y = lastPoint.y + (Math.cos(angle) * i);
       ctx.save();
-      ctx.translate(Math.random(0, 15) + x, Math.random(0, 15) + y);
+      ctx.translate(x, y);
       ctx.scale(0.9, 0.9);
-      ctx.globalAlpha = 0.4;
-      // ctx.rotate(Math.PI*100/getRandomInt(30,360));
-      ctx.rotate(getRandomInt(30, 360));
-      ctx.drawImage(img, -img.width / 2, -img.width / 2);
+      ctx.globalAlpha = 0.7; // Increase opacity for better blending
+      ctx.drawImage(img, -img.width / 2, -img.height / 2); // Center the brush
       ctx.restore();
     }
 
