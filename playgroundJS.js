@@ -39,11 +39,11 @@ if (window.innerWidth > 900) {
     var currentPoint = { x: e.clientX, y: e.clientY };
     var dist = distanceBetween(lastPoint, currentPoint);
     var angle = angleBetween(lastPoint, currentPoint);
-    for (var i = 0; i < dist; i += 10) {
+    for (var i = 0; i < dist; i += 5) {
       x = lastPoint.x + (Math.sin(angle) * i);
       y = lastPoint.y + (Math.cos(angle) * i);
       ctx.save();
-      ctx.translate(Math.random(0, 10) + x, Math.random(0, 5) + y);
+      ctx.translate(Math.random(0, 5) + x, Math.random(0, 5) + y);
       ctx.scale(0.9, 0.9);
       ctx.globalAlpha = 0.4;
       // ctx.rotate(Math.PI*100/getRandomInt(30,360));
