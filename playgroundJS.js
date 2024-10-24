@@ -68,7 +68,7 @@ if (window.innerWidth > 900) {
       ctx.fillRect(0, 0, canv.width, canv.height);
       ctx.restore();
 
-    }, 30);
+    }, 90);
   }
 
   function windowResized() {
