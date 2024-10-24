@@ -43,7 +43,7 @@ if (window.innerWidth > 900) {
       x = lastPoint.x + (Math.sin(angle) * i);
       y = lastPoint.y + (Math.cos(angle) * i);
       ctx.save();
-      ctx.translate(Math.random(0, 10) + x, Math.random(0, 10) + y);
+      ctx.translate(Math.random(0, 10) + x, Math.random(0, 5) + y);
       ctx.scale(0.9, 0.9);
       ctx.globalAlpha = 0.4;
       // ctx.rotate(Math.PI*100/getRandomInt(30,360));
@@ -56,7 +56,7 @@ if (window.innerWidth > 900) {
   };
   canv.onmouseup = function () {
     isDrawing = false;
-    fader = setTimeout(fadeCanvas, 800);
+    fader = setTimeout(fadeCanvas, 2000);
   };
 
   function fadeCanvas() {
